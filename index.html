@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>贪食蛇</title>
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<style>body{ text-align:center} 
+	canvas{border: 2px solid #333}</style>
+
+</head>
+
+<body>
+	<H1>贪食蛇</H1>
+	<p>按空格键开始/暂停</p>
+	<canvas id="myCanvas" >Your browser does not support canvas</canvas>
+
+	<script src="snake.js"></script>
+	<script type="text/javascript">
+		var container=document.getElementById('myCanvas')
+		var snake=new greedySnake(container,function(){
+			setTimeout(function(){
+				window.location.reload(true);//2秒后刷新页面
+			},2000)
+			
+		});
+		snake.run();//程序开始
+	</script>
+</body>
+
+</html>
